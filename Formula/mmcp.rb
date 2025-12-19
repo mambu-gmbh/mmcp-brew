@@ -6,17 +6,17 @@ class Mmcp < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.1/mmcp-v0.0.1-macos-arm64.tar.gz"
-      sha256 "7e099d18d70b4c43da916e0a08252f41d28fb8b8e3aff8667ff8fe48316a2899"
+      sha256 "98f47a2536f357f5869547b1b71cb9cf6140a9f2bff0c9d45900fb3b9eea78e1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.1/mmcp-v0.0.1-linux-amd64.tar.gz"
-      sha256 "fef83adef6f649006a14b13ef039f38c6cf816689d29a7a19a6f0581f834d08d"
+      sha256 "73dac9bb520743e59d1950b60be251ecd8d5d569c91857f3abec55e2689b563c"
     elsif Hardware::CPU.arm?
       url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.1/mmcp-v0.0.1-linux-arm64.tar.gz"
-      sha256 "4ef05f6bf1da63e3c0e8c45bc07e8de720f921ea979d618351813a10005cd2e6"
+      sha256 "a46c92805c63e0d66c9d900e0164ce06f4900b5ce96d44921d1fcbe69a7622b7"
     end
   end
 

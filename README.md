@@ -17,7 +17,7 @@ The Mambu MCP Server acts as a bridge between AI systems and Mambu's banking API
 Connect to the Repository and Install MMCP
 
 ```bash
-brew tap mambu-gmbh/mmcp-brew
+brew tap mambu-gmbh/mmcp-brew https://github.com/mambu-gmbh/mmcp-brew
 brew install mmcp
 ```
 

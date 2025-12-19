@@ -22,9 +22,5 @@ class Mmcp < Formula
 
   def install
     bin.install "mmcp"
-    
-    if OS.mac?
-      system "xattr", "-d", "com.apple.quarantine", "#{bin}/mmcp"
-    end
   end
 end

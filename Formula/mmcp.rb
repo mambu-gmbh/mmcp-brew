@@ -1,22 +1,22 @@
 class Mmcp < Formula
   desc "Mambu MCP Server"
   homepage "https://www.mambu.com"
-  version "v0.0.7"
+  version "v0.0.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.7/mmcp-v0.0.7-macos-arm64.tar.gz"
-      sha256 "0a94e8ba8023b9eabbc661eb2db0f19b34516b336ec14086d76c3d3e885d6086"
+      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.8/mmcp-v0.0.8-macos-arm64.tar.gz"
+      sha256 "bfb845ebb8d581390608f567010ea71a4543d12f761fa5ddae2cc116732934ba"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.7/mmcp-v0.0.7-linux-amd64.tar.gz"
-      sha256 "e06a7de31473987e1b00272939c6e592bd5271880d70ee4b48784281bda6f0cc"
+      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.8/mmcp-v0.0.8-linux-amd64.tar.gz"
+      sha256 "db112aa93864b6a60b289ce8b474bf8d544e22c32ad4a1f4cc9392573fc30355"
     elsif Hardware::CPU.arm?
-      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.7/mmcp-v0.0.7-linux-arm64.tar.gz"
-      sha256 "6ea4b5a4b443d72c80bbba42d78f802b47a86707da64ac11f5eee961ed931e71"
+      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.8/mmcp-v0.0.8-linux-arm64.tar.gz"
+      sha256 "a380a00aee9cec6c6a91de42e61d441b277a1db24dd6335225bea1244a68bf20"
     end
   end
 

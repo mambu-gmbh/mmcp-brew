@@ -1,22 +1,22 @@
 class Mmcp < Formula
   desc "Mambu MCP Server"
   homepage "https://www.mambu.com"
-  version "v0.0.14"
+  version "v0.0.15"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.14/mmcp-v0.0.14-macos-arm64.tar.gz"
-      sha256 "1fb9d985780ce4ede63eaf18b3db6c7755df230f1a6e44b3aea1d5dee49f7758"
+      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.15/mmcp-v0.0.15-macos-arm64.tar.gz"
+      sha256 "c21e8fe7999ae4839be8ecedc3704646087527852da7867ed10cb61e829e5be5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.14/mmcp-v0.0.14-linux-amd64.tar.gz"
-      sha256 "951da730e9cf5c42ea65baca1baa7c329d1be57d45bf48b90c692dbe8326503a"
+      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.15/mmcp-v0.0.15-linux-amd64.tar.gz"
+      sha256 "53bc1104e6ceda906c93020879b66cfcb53a099cc623c3f3c5a947fd326ab001"
     elsif Hardware::CPU.arm?
-      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.14/mmcp-v0.0.14-linux-arm64.tar.gz"
-      sha256 "996ee3966a915108d29bd18b614da29808b2ae9f93f149767f2a66cb97cf4aea"
+      url "https://github.com/mambu-gmbh/mmcp-brew/releases/download/v0.0.15/mmcp-v0.0.15-linux-arm64.tar.gz"
+      sha256 "45d808f284b9908e3615cf34b547351e00c8153c7acdb747cd271c996f159d0f"
     end
   end
 
@@ -24,7 +24,8 @@ class Mmcp < Formula
     bin.install "mmcp"
     
     if OS.mac?
-      system "xattr", "-d", "com.apple.quarantine", "#{bin}/mmcp"
+      # Remove quarantine attribute if it exists (suppress error if not present)
+      system "xattr", "-d", "com.apple.quarantine", "#{bin}/mmcp", err: :out
     end
   end
 end

@@ -22,10 +22,5 @@ class Mmcp < Formula
 
   def install
     bin.install "mmcp"
-    
-    if OS.mac?
-      # Remove quarantine attribute if it exists (suppress error if not present)
-      system "xattr", "-d", "com.apple.quarantine", "#{bin}/mmcp", err: :out
-    end
   end
 end

@@ -63,12 +63,43 @@ Add the Mambu MCP server configuration:
       "args": [],
       "env": {
         "MAMBU_BASE_URL": "https://your-tenant.mambu.com/api",
-        "MAMBU_AUTH_USERNAME": "your.username",
+        "MAMBU_AUTH_USERNAME": "your-username",
         "MAMBU_AUTH_PASSWORD": "your-password"
       }
     }
   }
 }
+```
+
+#### Junie CLI
+
+Edit your Junie MCP configuration file:
+
+Add the Mambu MCP server configuration:
+
+```json
+{
+    "mcpServers": {
+        "mambu": {
+            "type": "com.intellij.ml.llm.matterhorn.core.mcp.McpServerConfiguration.McpServerCommand",
+            "name": "mambu",
+            "command": "/opt/homebrew/bin/mmcp",
+            "args": [
+                ""
+            ],
+            "env": {
+                "variables": {
+                    "MAMBU_BASE_URL": "https://your-tenant.mambu.com/api",
+                    "MAMBU_AUTH_USERNAME": "your-username",
+                    "MAMBU_AUTH_PASSWORD": "your-password"
+                }
+            },
+            "sourcePath": "~/.junie/mcp/mcp.json",
+            "enabled": true
+        }
+    }
+}
+
 ```
 
 **Windows users**: If `mmcp` is not in your PATH, use the full path:

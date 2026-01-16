@@ -214,7 +214,7 @@ As an example, you can enable the `clients/create` operation by adding the follo
         "MAMBU_BASE_URL": "https://your-tenant.mambu.com/api",
         "MAMBU_AUTH_USERNAME": "your.username",
         "MAMBU_AUTH_PASSWORD": "your-password",
-        "CLIENTS_CREATE": true
+        "CLIENTS_CREATE": "true"
       }
     }
   }

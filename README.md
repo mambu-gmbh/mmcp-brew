@@ -78,25 +78,20 @@ Add the Mambu MCP server configuration:
 
 ```json
 {
-    "mcpServers": {
-        "mambu": {
-            "type": "com.intellij.ml.llm.matterhorn.core.mcp.McpServerConfiguration.McpServerCommand",
-            "name": "mambu",
-            "command": "/opt/homebrew/bin/mmcp",
-            "args": [
-                ""
-            ],
-            "env": {
-                "variables": {
-                    "MAMBU_BASE_URL": "https://your-tenant.mambu.com/api",
-                    "MAMBU_AUTH_USERNAME": "your-username",
-                    "MAMBU_AUTH_PASSWORD": "your-password"
-                }
-            },
-            "sourcePath": "~/.junie/mcp/mcp.json",
-            "enabled": true
-        }
+  "mcpServers": {
+    "mambu": {
+      "type": "com.intellij.ml.llm.matterhorn.core.mcp.McpServerConfiguration.McpServerCommand",
+      "name": "mambu",
+      "command": "/opt/homebrew/bin/mmcp",
+      "env": {
+        "MAMBU_BASE_URL": "https://<DOMAIN>/api",
+        "MAMBU_AUTH_USERNAME": "<USER>",
+        "MAMBU_AUTH_PASSWORD": "<PASSWORD>"
+      },
+      "sourcePath": "~/.junie/mcp/mcp.json",
+      "enabled": "true"
     }
+  }
 }
 
 ```
